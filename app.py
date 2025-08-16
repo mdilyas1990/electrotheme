@@ -2,14 +2,11 @@
 import streamlit as st
 from gradio_client import Client
 
-# Get Hugging Face token securely from Streamlit Secrets
-HF_TOKEN = st.secrets["HF_TOKEN"]
+TOKEN = st.secrets["TOKEN"]
 
-# Your private Hugging Face Space ID
-SPACE_ID = "mdilyas1990/madrasthemes"
+ID = st.secrets["ID"]
 
-# Initialize Gradio client with token
-client = Client(SPACE_ID, hf_token=HF_TOKEN)
+client = Client(ID, hf_token=TOKEN)
 
 st.title("Electro Theme Documentation Assistant")
 
